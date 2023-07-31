@@ -16,26 +16,43 @@
     margin: auto;
 }
 header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    background: #ff6a6a;
+    border-bottom: 2px solid #434748;
+    z-index: 1000;
 }
 .gnb-depth1 {
     display: flex;
 }
-.gnb-depth1 li a {
-    /* display: block;
-    font-size: 18px;
-    height: 100px;
-    line-height: 100px; */
-    padding: 20px;
+.gnb-depth1 > li {
+    position: relative;
 }
-
+.gnb-depth1 > li > a {
+    display: block;
+    width: 120px;
+    font-size: 20px;
+    text-align: center;
+}
+.gnb-depth2 {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    background: #1d8844;
+    padding: 10px 0;
+    text-align: center;
+}
+.gnb .gnb-depth2 li a {
+    display: block;
+    padding: 5px 0;
+    color: #fff;
+    font-size: 14px;
+}
 .slide {
     height: 300px;
-    background: #cb6464;
     overflow: hidden;
     position: relative;
 }
@@ -56,11 +73,69 @@ main {
 }
 
 .sec-g {
+    position: relative;
     width: 30%;
     height: 180px;
-
-    background: #8c60f4;
 }
+
+.sec-g .sec-tit {
+    font-size: 20px;
+    border-bottom: 2px solid #434748;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+}
+.sec-g .link-more {
+    position: absolute;
+    top: 3px;
+    right: 0;
+}
+.sec-g img {
+    display: block;
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    object-position: 50% 0;
+}
+.lst-bbs a {
+    font-size: 14px;
+    padding: 2px 0;
+}
+.lst-bbs li {
+    position: relative;
+    padding-left: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.lst-bbs li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 3px;
+    background: #434748;
+}
+.lst-gallery {
+    display: flex;
+    justify-content: space-between;
+}
+.lst-gallery li {
+    width: 30%;
+}
+.lst-gallery p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+.sec-bnr .sec-tit {
+    display: none;
+}
+.sec-bnr img {
+    height: 180px;
+}
+
 footer {
     height: 100px;
     background: rgb(190, 238, 205);
@@ -81,4 +156,3 @@ footer {
 .family ul li a {
     padding: 20px;
 }
-
